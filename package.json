@@ -3,7 +3,7 @@
   "displayName": "SplitJoin VSCode",
   "publisher": "dautroc",
   "description": "Split and Join arguments within brackets, similar to Neovim's mini.splitjoin.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "icon": "logo.png",
   "repository": {
     "type": "git",
