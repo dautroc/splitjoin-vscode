@@ -1,21 +1,38 @@
 {
   "name": "splitjoin-vscode",
   "displayName": "SplitJoin VSCode",
-  "description": "Split and Join",
+  "description": "Split and Join arguments within brackets, similar to Neovim's mini.splitjoin.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dautroc/splitjoin-vscode.git"
+  },
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.96.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Formatters"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:splitjoin-vscode.toggle",
+    "onCommand:splitjoin-vscode.split",
+    "onCommand:splitjoin-vscode.join"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "splitjoin-vscode.helloWorld",
-        "title": "Hello World"
+        "command": "splitjoin-vscode.toggle",
+        "title": "SplitJoin: Toggle Arguments"
+      },
+      {
+        "command": "splitjoin-vscode.split",
+        "title": "SplitJoin: Split Arguments"
+      },
+      {
+        "command": "splitjoin-vscode.join",
+        "title": "SplitJoin: Join Arguments"
       }
     ]
   },
@@ -28,7 +45,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.100.0",
+    "@types/vscode": "^1.96.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
     "@typescript-eslint/eslint-plugin": "^8.31.1",

@@ -1,71 +1,37 @@
-# splitjoin-vscode README
+# SplitJoin for VSCode
 
-This is the README for your extension "splitjoin-vscode". After writing up a brief description, we recommend including the following sections.
+Provides functionality inspired by the Neovim `mini.splitjoin` plugin, allowing you to easily split arguments onto multiple lines or join them back onto a single line.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+*   **Toggle Arguments**: Intelligently splits arguments to multiple lines if they are currently on a single line, or joins them to a single line if they are already split across multiple lines.
+*   **Split Arguments**: Explicitly splits arguments within the detected brackets onto separate, indented lines.
+*   **Join Arguments**: Explicitly joins arguments currently on multiple lines within the detected brackets onto a single line.
 
-For example if there is an image subfolder under your extension project workspace:
+## How to Use
 
-\!\[feature X\]\(images/feature-x.png\)
+This extension provides the following commands, which can be accessed via the VS Code Command Palette (usually `Ctrl+Shift+P` or `Cmd+Shift+P`):
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+*   `SplitJoin: Toggle Arguments`
+    *   Command ID: `splitjoin-vscode.toggle`
+*   `SplitJoin: Split Arguments`
+    *   Command ID: `splitjoin-vscode.split`
+*   `SplitJoin: Join Arguments`
+    *   Command ID: `splitjoin-vscode.join`
 
-## Requirements
+Place your cursor within or near the arguments you wish to modify and run the desired command.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Supported Syntax
 
-## Extension Settings
+*   **Brackets**: The extension currently recognizes arguments within `()`, `[]`, and `{}`.
+*   **Argument Separator**: The primary argument separator is assumed to be a comma (`,`). The parser attempts to correctly handle nested structures and strings containing commas.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Future Considerations
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+*   Customizable keybindings.
+*   Configuration options for bracket types and separators.
+*   More advanced handling for comments and complex language constructs.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+*   Please report any issues encountered on the project's repository (if applicable).
